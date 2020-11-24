@@ -10,7 +10,7 @@ terraform {
 provider "google" {
   version = "3.5.0"
 
-  credentials = GOOGLE_CREDENTIALS
+  credentials = "${var.GOOGLE_CREDENTIALSeponame}"
 
   project     = "diegobastos-mbaimpacta-turma04"
   region  = "us-central1"
