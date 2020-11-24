@@ -1,3 +1,5 @@
+variable "GOOGLE_CREDENTIALS" {}
+
 terraform {
   required_providers {
     google = {
