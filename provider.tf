@@ -1,9 +1,6 @@
 # Configura o Provider Google Cloud com o Projeto
 provider "google" {
   version = "3.5.0"
-
-  credentials = var.GOOGLE_CREDENTIALS
-
   project     = "diegobastos-mbaimpacta-turma04"
   region  = "us-central1"
   zone    = "us-central1-b"
