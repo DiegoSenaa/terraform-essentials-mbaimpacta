@@ -6,14 +6,6 @@ terraform {
   }
 }
 
-# Configura o Provider Google Cloud com o Projeto
-provider "google" {
-  version = "3.5.0"
-  project     = "diegobastos-mbaimpacta-turma04"
-  region  = "us-central1"
-  zone    = "us-central1-b"
-}
-
 resource "google_compute_instance" "firstvm" {
   name         = "website"
   machine_type = "n1-standard-1"
