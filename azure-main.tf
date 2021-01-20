@@ -1,8 +1,8 @@
-resource "azurerm_resource_group" "firstresourcegroup" {
-    name     = "LabMultiCloud"
-    location = var.rg_location
+# resource "azurerm_resource_group" "firstresourcegroup" {
+#     name     = "LabMultiCloud"
+#     location = var.rg_location
 
-    tags = {
-        environment = "Terraform Multi Cloud"
-    }
-}
+#     tags = {
+#         environment = "Terraform Multi Cloud"
+#     }
+# }

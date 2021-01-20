@@ -1,9 +1,9 @@
-# Insira no Final do Arquivo
+# # Insira no Final do Arquivo
 
-### AZURE
+# ### AZURE
 
-variable "rg_location" {
-  type        = string
-  description = "Definindo a Região do Azure"
-  default     = "East US"
-}
+# variable "rg_location" {
+#   type        = string
+#   description = "Definindo a Região do Azure"
+#   default     = "East US"
+# }
