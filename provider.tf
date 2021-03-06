@@ -19,7 +19,7 @@ provider "google" {
   zone    = var.gcp_zone
 }
 
-# # Configura o Provider Microsoft Azure
-# provider "azurerm" {
-#   features {}
-# }
+# Configura o Provider Microsoft Azure
+provider "azurerm" {
+  features {}
+}
