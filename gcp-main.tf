@@ -1,16 +1,11 @@
-terraform {
-  required_providers {
-    google = {
-      source = "hashicorp/google"
-    }
-  }
-}
+#### RECURSOS NO GCP #####
 
+# Cria uma VM no Google Cloud
 resource "google_compute_instance" "firstvm" {
   name         = "website"
   machine_type = "n1-standard-1"
-  zone         = "us-central1-a"
-  tags    = ["website", "impacta"]
+  zone         = var.gcp_zone
+  tags         = ["website", "impacta"]
 
   # Defini a Imagem da VM
   boot_disk {
@@ -24,12 +19,7 @@ resource "google_compute_instance" "firstvm" {
     network = "default" # Estamos usando a VPC default que já vem por padrão no projeto.
 
     access_config {
-      // A presença do bloco access_config, mesmo sem argumentos, garante que a instância estará acessível pela internet.
     }
+    // A presença do bloco access_config, mesmo sem argumentos, garante que a instância estará acessível pela internet.
   }
-}
-
-# Retorna o IP da VM criada
-output "ip" {
-  value = google_compute_instance.firstvm.network_interface.0.access_config.0.nat_ip
 }
